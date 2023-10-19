@@ -8,7 +8,7 @@ const Navbar = () => {
       <h1 className="text-red-600 text-3xl font-bold uppercase">Netflix</h1>
       {/* </Link> */}
 
-      <div className="flex items-center gap-4 text-sm text-white font-medium tracking-wide ">
+      {/* <div className="flex items-center gap-4 text-sm text-white font-medium tracking-wide ">
         <Link to="./login">
           <p>Sign In</p>
         </Link>
@@ -18,7 +18,7 @@ const Navbar = () => {
             Create Account
           </p>
         </Link>
-      </div>
+      </div> */}
     </nav>
   );
 };

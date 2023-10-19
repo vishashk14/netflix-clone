@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, EffectFade } from "swiper/modules";
 
 const Row = ({ title, fetchURL, rowID }) => {
   const [movies, setMovies] = useState([]);
@@ -28,7 +28,7 @@ const Row = ({ title, fetchURL, rowID }) => {
       <div className="relative flex items-center group">
         <div className="relative w-full mt-4 ps-4">
           <Swiper
-            slidesPerView={1}
+            slidesPerView={1.2}
             spaceBetween={30}
             loop={true}
             pagination={{
@@ -49,7 +49,7 @@ const Row = ({ title, fetchURL, rowID }) => {
               },
             }}
             navigation={true}
-            modules={[Navigation]}
+            modules={[Navigation, EffectFade]}
             className="mySwiper fill-none"
           >
             {movies.map((i, index) => {
@@ -62,7 +62,7 @@ const Row = ({ title, fetchURL, rowID }) => {
                         src={`https://image.tmdb.org/t/p/original/${i?.backdrop_path}`}
                         className="h-auto w-full"
                       />
-                      <p className="text-white text-xl mt-1 w-[22rem]">
+                      <p className="text-white text-xl mt-1 ">
                         {i?.title}
                       </p>
                       <p className="text-gray-300 mt-2">

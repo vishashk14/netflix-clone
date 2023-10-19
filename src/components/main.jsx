@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import request from "../request";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   const [movies, setMovies] = useState([]);
@@ -24,6 +25,12 @@ const Main = () => {
   return (
     <>
       <div className="relative">
+
+      <Link to='/' >
+      <button className="absolute z-[110] top-6 right-6 bg-red-800 text-white px-6 py-2 cursor-pointer rounded">
+        Logout
+      </button>
+      </Link>
         <div className="bg-gradient-to-r from-black absolute top-0 left-0 h-[500px] lg:h-[700px] w-full" />
         <img
           alt={movie?.title}
@@ -31,7 +38,8 @@ const Main = () => {
           className="w-full h-[500px] lg:h-[700px] object-cover bg-no-repeat"
         />
 
-        <div className="absolute left-4 top-[30%] z-20">
+{/* ------content------- */}
+        <div className="absolute left-4 top-[30%] z-20 lg:left-[6%]">
           <h1 className="text-white text-3xl font-medium">
             {movie?.original_title}
           </h1>
@@ -47,7 +55,7 @@ const Main = () => {
             <span>Release </span>
             {movie?.release_date}
           </p>
-          <p className="text-base text-gray-200 mt-3 max-w-[85%] md:max-w-[60%] lg:max-w-[55%]">
+          <p className="text-base text-gray-200 mt-3 max-w-[85%] md:max-w-[60%] lg:max-w-[40%]">
             {textTruncate(movie?.overview, 180)}
           </p>
         </div>

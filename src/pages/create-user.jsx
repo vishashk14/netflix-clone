@@ -15,7 +15,7 @@ function CreateUserID() {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       console.log(email, password);
-      navigate("/");
+      navigate("/app");
     } catch (e) {
       setError(e.message);
       console.log(e.message);

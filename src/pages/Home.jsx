@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Main from "../components/main";
 import Row from "../components/row/row";
 import VideoPlayer from "../components/video/videoplayer";
@@ -10,7 +11,9 @@ function Home() {
       <Row title="Trending" fetchURL={request?.requestTrending} />
       <Row title="Top Rated" fetchURL={request.requestTopRated} />
       <Row title="More To Know" fetchURL={request?.requestpopularTwo} />
-      <VideoPlayer fetchURL={request?.requestVideos} />
+      {/* <VideoPlayer fetchURL={request?.requestVideos} /> */}
+     
+     
     </div>
   );
 }
